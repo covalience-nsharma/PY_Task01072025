@@ -13,7 +13,7 @@ def clrscreen():
 def SearchIssuedBooks():
     try:
         os.system('cls')
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         mno = input("Enter Member No to search issued book : ")
         query = ("SELECT * FROM issue where mno = %s")
@@ -48,7 +48,7 @@ def SearchIssuedBooks():
 
 def issueBook():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         bno = input("Enter Book Code to issue : ")
         mno = input("Enter Member Code : ")
@@ -75,7 +75,7 @@ def issueBook():
 
 def returnBook():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         bno = input("Enter Book Code of the Book to be returned to the Library : ")
         Mno = input("Enter Member Code of Member who is returning Book : ")

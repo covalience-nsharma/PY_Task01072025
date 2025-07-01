@@ -14,7 +14,7 @@ def clrscreen():
 
 def insertData():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         bno = input("Enter Book Code : ")
         bname = input("Enter Book Name : ")
@@ -45,7 +45,7 @@ def insertData():
 
 def deleteBook():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         bno = input("Enter Book Code of Book to be deleted from the Library : ")
         Qry = ("""DELETE FROM BookRecord WHERE BNO = %s""")
@@ -67,7 +67,7 @@ def deleteBook():
 
 def SearchBookRec():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         bno = input("Enter Book No to be Searched from the Library : ")
         query = ("SELECT * FROM BookRecord WHERE BNo = %s ")
@@ -104,7 +104,7 @@ def SearchBookRec():
 
 def UpdateBook():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         bno = input("Enter Book Code of Book to be Updated from the Library : ")
         query = ("SELECT * FROM BookRecord WHERE BNo = %s ")

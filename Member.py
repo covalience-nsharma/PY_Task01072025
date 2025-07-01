@@ -12,7 +12,7 @@ def clrscreen():
 
 def insertMember():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         mno = input("Enter Member Code : ")
         mname = input("Enter Member Name : ")
@@ -41,7 +41,7 @@ def insertMember():
 
 def deleteMember():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         mno = input("Enter Member Code to be deleted from the Library : ")
         Qry =("""DELETE FROM Member WHERE MNO = %s""")
@@ -63,7 +63,7 @@ def deleteMember():
 
 def SearchMember():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         mnm = input("Enter Member No to be Searched from the Library : ")
         query = ("SELECT * FROM Member where mno = %s")
@@ -98,7 +98,7 @@ def SearchMember():
 
 def UpdateMember():
     try:
-        cnx = mysql.connector.connect(user='root', password='123', host='localhost', database='Library')
+        cnx = mysql.connector.connect(user='PY_USER_1', password='P@55word', host='localhost', database='Library')
         Cursor = cnx.cursor()
         mno = input("Enter Member Code of Member to be Updated from the Library : ")
         query = ("SELECT * FROM member WHERE mno = %s")
